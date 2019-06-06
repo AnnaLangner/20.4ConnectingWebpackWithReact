@@ -1,0 +1,22 @@
+{
+  "name": "20.4ConnectingWebpackWithReact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnaLangner/20.4ConnectingWebpackWithReact.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnaLangner/20.4ConnectingWebpackWithReact/issues"
+  },
+  "homepage": "https://github.com/AnnaLangner/20.4ConnectingWebpackWithReact#readme"
+}
