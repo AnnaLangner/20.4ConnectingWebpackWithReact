@@ -18,5 +18,20 @@
   "bugs": {
     "url": "https://github.com/AnnaLangner/20.4ConnectingWebpackWithReact/issues"
   },
-  "homepage": "https://github.com/AnnaLangner/20.4ConnectingWebpackWithReact#readme"
+  "homepage": "https://github.com/AnnaLangner/20.4ConnectingWebpackWithReact#readme",
+  "devDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0"
+  }
 }
