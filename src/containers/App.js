@@ -16,11 +16,11 @@ class App extends React.Component {
         };
         const data = [...this.state.data, todo];
         this.setState({data});
-    },
+    }
     removeTodo(id) {
         const remainder = this.state.data.filter(todo => todo.id !== id);
         this.setState({data: remainder});
-    },
+    }
     render() {
         return (
             <div className={style.TodoApp}>
