@@ -1,3 +1,4 @@
+import style from './App.css';
 import React from 'react';
 import uuid from 'uuid';
 
