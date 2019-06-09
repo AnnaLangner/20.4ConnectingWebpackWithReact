@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --env development",
+    "start": "webpack-dev-server --hot --env development",
     "build": "webpack --env production",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore"
   },
@@ -32,7 +32,9 @@
     "react-dom": "^16.8.6",
     "style-loader": "^0.23.1",
     "webpack": "^4.33.0",
-    "webpack-cli": "^3.3.2"
+    "webpack-cli": "^3.3.2",
+    "react-hot-loader": "^4.8.3",
+    "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
     "uuid": "^3.3.2"
