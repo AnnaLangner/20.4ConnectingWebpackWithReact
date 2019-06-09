@@ -86,7 +86,7 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((function(module, exports, __webpack_require__) {
 
 "use strict";
 
@@ -95,7 +95,7 @@ if (true) {
   module.exports = __webpack_require__(7);
 } else {}
 
-/***/ }),
+/***/ })),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -143,9 +143,9 @@ function shouldUseNative() {
       test2['_' + String.fromCharCode(i)] = i;
     }
 
-    var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+    var order2 = Object.getOwnPropertyNames(test2).map((function (n) {
       return test2[n];
-    });
+    }));
 
     if (order2.join('') !== '0123456789') {
       return false;
@@ -153,9 +153,9 @@ function shouldUseNative() {
 
 
     var test3 = {};
-    'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+    'abcdefghijklmnopqrst'.split('').forEach((function (letter) {
       test3[letter] = letter;
-    });
+    }));
 
     if (Object.keys(Object.assign({}, test3)).join('') !== 'abcdefghijklmnopqrst') {
       return false;
@@ -363,9 +363,9 @@ function ca(a, b, d, c, e, g, h, f) {
     if (void 0 === b) a = Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else {
       var l = [d, c, e, g, h, f],
           m = 0;
-      a = Error(b.replace(/%s/g, function () {
+      a = Error(b.replace(/%s/g, (function () {
         return l[m++];
-      }));
+      })));
       a.name = "Invariant Violation";
     }
     a.framesToPop = 1;
@@ -479,9 +479,9 @@ function escape(a) {
     "=": "=0",
     ":": "=2"
   };
-  return "$" + ("" + a).replace(/[=:]/g, function (a) {
+  return "$" + ("" + a).replace(/[=:]/g, (function (a) {
     return b[a];
-  });
+  }));
 }
 
 var O = /\/+/g,
@@ -561,9 +561,9 @@ function fa(a, b, d) {
   var c = a.result,
       e = a.keyPrefix;
   a = a.func.call(a.context, b, a.count++);
-  Array.isArray(a) ? V(a, c, d, function (a) {
+  Array.isArray(a) ? V(a, c, d, (function (a) {
     return a;
-  }) : null != a && (N(a) && (a = da(a, e + (!a.key || b && b.key === a.key ? "" : ("" + a.key).replace(O, "$&/") + "/") + d)), c.push(a));
+  })) : null != a && (N(a) && (a = da(a, e + (!a.key || b && b.key === a.key ? "" : ("" + a.key).replace(O, "$&/") + "/") + d)), c.push(a));
 }
 
 function V(a, b, d, c, e) {
@@ -595,15 +595,15 @@ var X = {
       R(b);
     },
     count: function (a) {
-      return U(a, function () {
+      return U(a, (function () {
         return null;
-      }, null);
+      }), null);
     },
     toArray: function (a) {
       var b = [];
-      V(a, b, null, function (a) {
+      V(a, b, null, (function (a) {
         return a;
-      });
+      }));
       return b;
     },
     only: function (a) {
@@ -772,9 +772,9 @@ function ba(a, b, c, d, e, f, g, h) {
     if (void 0 === b) a = Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else {
       var l = [c, d, e, f, g, h],
           k = 0;
-      a = Error(b.replace(/%s/g, function () {
+      a = Error(b.replace(/%s/g, (function () {
         return l[k++];
-      }));
+      })));
       a.name = "Invariant Violation";
     }
     a.framesToPop = 1;
@@ -1642,55 +1642,55 @@ function C(a, b, c, d, e) {
 }
 
 var D = {};
-"children dangerouslySetInnerHTML defaultValue defaultChecked innerHTML suppressContentEditableWarning suppressHydrationWarning style".split(" ").forEach(function (a) {
+"children dangerouslySetInnerHTML defaultValue defaultChecked innerHTML suppressContentEditableWarning suppressHydrationWarning style".split(" ").forEach((function (a) {
   D[a] = new C(a, 0, !1, a, null);
-});
-[["acceptCharset", "accept-charset"], ["className", "class"], ["htmlFor", "for"], ["httpEquiv", "http-equiv"]].forEach(function (a) {
+}));
+[["acceptCharset", "accept-charset"], ["className", "class"], ["htmlFor", "for"], ["httpEquiv", "http-equiv"]].forEach((function (a) {
   var b = a[0];
   D[b] = new C(b, 1, !1, a[1], null);
-});
-["contentEditable", "draggable", "spellCheck", "value"].forEach(function (a) {
+}));
+["contentEditable", "draggable", "spellCheck", "value"].forEach((function (a) {
   D[a] = new C(a, 2, !1, a.toLowerCase(), null);
-});
-["autoReverse", "externalResourcesRequired", "focusable", "preserveAlpha"].forEach(function (a) {
+}));
+["autoReverse", "externalResourcesRequired", "focusable", "preserveAlpha"].forEach((function (a) {
   D[a] = new C(a, 2, !1, a, null);
-});
-"allowFullScreen async autoFocus autoPlay controls default defer disabled formNoValidate hidden loop noModule noValidate open playsInline readOnly required reversed scoped seamless itemScope".split(" ").forEach(function (a) {
+}));
+"allowFullScreen async autoFocus autoPlay controls default defer disabled formNoValidate hidden loop noModule noValidate open playsInline readOnly required reversed scoped seamless itemScope".split(" ").forEach((function (a) {
   D[a] = new C(a, 3, !1, a.toLowerCase(), null);
-});
-["checked", "multiple", "muted", "selected"].forEach(function (a) {
+}));
+["checked", "multiple", "muted", "selected"].forEach((function (a) {
   D[a] = new C(a, 3, !0, a, null);
-});
-["capture", "download"].forEach(function (a) {
+}));
+["capture", "download"].forEach((function (a) {
   D[a] = new C(a, 4, !1, a, null);
-});
-["cols", "rows", "size", "span"].forEach(function (a) {
+}));
+["cols", "rows", "size", "span"].forEach((function (a) {
   D[a] = new C(a, 6, !1, a, null);
-});
-["rowSpan", "start"].forEach(function (a) {
+}));
+["rowSpan", "start"].forEach((function (a) {
   D[a] = new C(a, 5, !1, a.toLowerCase(), null);
-});
+}));
 var rc = /[\-:]([a-z])/g;
 
 function sc(a) {
   return a[1].toUpperCase();
 }
 
-"accent-height alignment-baseline arabic-form baseline-shift cap-height clip-path clip-rule color-interpolation color-interpolation-filters color-profile color-rendering dominant-baseline enable-background fill-opacity fill-rule flood-color flood-opacity font-family font-size font-size-adjust font-stretch font-style font-variant font-weight glyph-name glyph-orientation-horizontal glyph-orientation-vertical horiz-adv-x horiz-origin-x image-rendering letter-spacing lighting-color marker-end marker-mid marker-start overline-position overline-thickness paint-order panose-1 pointer-events rendering-intent shape-rendering stop-color stop-opacity strikethrough-position strikethrough-thickness stroke-dasharray stroke-dashoffset stroke-linecap stroke-linejoin stroke-miterlimit stroke-opacity stroke-width text-anchor text-decoration text-rendering underline-position underline-thickness unicode-bidi unicode-range units-per-em v-alphabetic v-hanging v-ideographic v-mathematical vector-effect vert-adv-y vert-origin-x vert-origin-y word-spacing writing-mode xmlns:xlink x-height".split(" ").forEach(function (a) {
+"accent-height alignment-baseline arabic-form baseline-shift cap-height clip-path clip-rule color-interpolation color-interpolation-filters color-profile color-rendering dominant-baseline enable-background fill-opacity fill-rule flood-color flood-opacity font-family font-size font-size-adjust font-stretch font-style font-variant font-weight glyph-name glyph-orientation-horizontal glyph-orientation-vertical horiz-adv-x horiz-origin-x image-rendering letter-spacing lighting-color marker-end marker-mid marker-start overline-position overline-thickness paint-order panose-1 pointer-events rendering-intent shape-rendering stop-color stop-opacity strikethrough-position strikethrough-thickness stroke-dasharray stroke-dashoffset stroke-linecap stroke-linejoin stroke-miterlimit stroke-opacity stroke-width text-anchor text-decoration text-rendering underline-position underline-thickness unicode-bidi unicode-range units-per-em v-alphabetic v-hanging v-ideographic v-mathematical vector-effect vert-adv-y vert-origin-x vert-origin-y word-spacing writing-mode xmlns:xlink x-height".split(" ").forEach((function (a) {
   var b = a.replace(rc, sc);
   D[b] = new C(b, 1, !1, a, null);
-});
-"xlink:actuate xlink:arcrole xlink:href xlink:role xlink:show xlink:title xlink:type".split(" ").forEach(function (a) {
+}));
+"xlink:actuate xlink:arcrole xlink:href xlink:role xlink:show xlink:title xlink:type".split(" ").forEach((function (a) {
   var b = a.replace(rc, sc);
   D[b] = new C(b, 1, !1, a, "http://www.w3.org/1999/xlink");
-});
-["xml:base", "xml:lang", "xml:space"].forEach(function (a) {
+}));
+["xml:base", "xml:lang", "xml:space"].forEach((function (a) {
   var b = a.replace(rc, sc);
   D[b] = new C(b, 1, !1, a, "http://www.w3.org/XML/1998/namespace");
-});
-["tabIndex", "crossOrigin"].forEach(function (a) {
+}));
+["tabIndex", "crossOrigin"].forEach((function (a) {
   D[a] = new C(a, 1, !1, a.toLowerCase(), null);
-});
+}));
 
 function tc(a, b, c, d) {
   var e = D.hasOwnProperty(b) ? D[b] : null;
@@ -2276,12 +2276,12 @@ function wd(a, b) {
   vd[c] = b;
 }
 
-[["blur", "blur"], ["cancel", "cancel"], ["click", "click"], ["close", "close"], ["contextmenu", "contextMenu"], ["copy", "copy"], ["cut", "cut"], ["auxclick", "auxClick"], ["dblclick", "doubleClick"], ["dragend", "dragEnd"], ["dragstart", "dragStart"], ["drop", "drop"], ["focus", "focus"], ["input", "input"], ["invalid", "invalid"], ["keydown", "keyDown"], ["keypress", "keyPress"], ["keyup", "keyUp"], ["mousedown", "mouseDown"], ["mouseup", "mouseUp"], ["paste", "paste"], ["pause", "pause"], ["play", "play"], ["pointercancel", "pointerCancel"], ["pointerdown", "pointerDown"], ["pointerup", "pointerUp"], ["ratechange", "rateChange"], ["reset", "reset"], ["seeked", "seeked"], ["submit", "submit"], ["touchcancel", "touchCancel"], ["touchend", "touchEnd"], ["touchstart", "touchStart"], ["volumechange", "volumeChange"]].forEach(function (a) {
+[["blur", "blur"], ["cancel", "cancel"], ["click", "click"], ["close", "close"], ["contextmenu", "contextMenu"], ["copy", "copy"], ["cut", "cut"], ["auxclick", "auxClick"], ["dblclick", "doubleClick"], ["dragend", "dragEnd"], ["dragstart", "dragStart"], ["drop", "drop"], ["focus", "focus"], ["input", "input"], ["invalid", "invalid"], ["keydown", "keyDown"], ["keypress", "keyPress"], ["keyup", "keyUp"], ["mousedown", "mouseDown"], ["mouseup", "mouseUp"], ["paste", "paste"], ["pause", "pause"], ["play", "play"], ["pointercancel", "pointerCancel"], ["pointerdown", "pointerDown"], ["pointerup", "pointerUp"], ["ratechange", "rateChange"], ["reset", "reset"], ["seeked", "seeked"], ["submit", "submit"], ["touchcancel", "touchCancel"], ["touchend", "touchEnd"], ["touchstart", "touchStart"], ["volumechange", "volumeChange"]].forEach((function (a) {
   wd(a, !0);
-});
-td.forEach(function (a) {
+}));
+td.forEach((function (a) {
   wd(a, !1);
-});
+}));
 var xd = {
   eventTypes: ud,
   isInteractiveTopLevelEventType: function (a) {
@@ -2750,9 +2750,9 @@ Ba.injectEventPluginsByName({
 
 function Zd(a) {
   var b = "";
-  aa.Children.forEach(a, function (a) {
+  aa.Children.forEach(a, (function (a) {
     null != a && (b += a);
-  });
+  }));
   return b;
 }
 
@@ -2844,13 +2844,13 @@ function he(a, b) {
 }
 
 var ie = void 0,
-    je = function (a) {
+    je = (function (a) {
   return "undefined" !== typeof MSApp && MSApp.execUnsafeLocalFunction ? function (b, c, d, e) {
-    MSApp.execUnsafeLocalFunction(function () {
+    MSApp.execUnsafeLocalFunction((function () {
       return a(b, c, d, e);
-    });
+    }));
   } : a;
-}(function (a, b) {
+})((function (a, b) {
   if (a.namespaceURI !== fe.svg || "innerHTML" in a) a.innerHTML = b;else {
     ie = ie || document.createElement("div");
     ie.innerHTML = "<svg>" + b + "</svg>";
@@ -2859,7 +2859,7 @@ var ie = void 0,
 
     for (; b.firstChild;) a.appendChild(b.firstChild);
   }
-});
+}));
 
 function ke(a, b) {
   if (b) {
@@ -2919,12 +2919,12 @@ var le = {
   strokeWidth: !0
 },
     me = ["Webkit", "ms", "Moz", "O"];
-Object.keys(le).forEach(function (a) {
-  me.forEach(function (b) {
+Object.keys(le).forEach((function (a) {
+  me.forEach((function (b) {
     b = b + a.charAt(0).toUpperCase() + a.substring(1);
     le[b] = le[a];
-  });
-});
+  }));
+}));
 
 function ne(a, b, c) {
   return null == b || "boolean" === typeof b || "" === b ? "" : c || "number" !== typeof b || 0 === b || le.hasOwnProperty(a) && le[a] ? ("" + b).trim() : b + "px";
@@ -3192,12 +3192,12 @@ function Te(a) {
 
   try {
     var c = b.inject(a);
-    Qe = Se(function (a) {
+    Qe = Se((function (a) {
       return b.onCommitFiberRoot(c, a);
-    });
-    Re = Se(function (a) {
+    }));
+    Re = Se((function (a) {
       return b.onCommitFiberUnmount(c, a);
-    });
+    }));
   } catch (d) {}
 
   return !0;
@@ -3418,11 +3418,11 @@ function hf(a) {
       a._status = 0;
       b = a._ctor;
       b = b();
-      b.then(function (b) {
+      b.then((function (b) {
         0 === a._status && (b = b.default, a._status = 1, a._result = b);
-      }, function (b) {
+      }), (function (b) {
         0 === a._status && (a._status = 2, a._result = b);
-      });
+      }));
 
       switch (a._status) {
         case 1:
@@ -3723,9 +3723,9 @@ function Cf(a) {
 
     for (q = d(e, q); u < h.length; u++) if (B = A(q, e, u, h[u], k)) a && null !== B.alternate && q.delete(null === B.key ? u : B.key), g = f(B, g, u), null === m ? l = B : m.sibling = B, m = B;
 
-    a && q.forEach(function (a) {
+    a && q.forEach((function (a) {
       return b(e, a);
-    });
+    }));
     return l;
   }
 
@@ -3761,9 +3761,9 @@ function Cf(a) {
 
     for (q = d(e, q); !w.done; u++, w = h.next()) w = A(q, e, u, w.value, k), null !== w && (a && null !== w.alternate && q.delete(null === w.key ? u : w.key), g = f(w, g, u), null === m ? l = w : m.sibling = w, m = w);
 
-    a && q.forEach(function (a) {
+    a && q.forEach((function (a) {
       return b(e, a);
-    });
+    }));
     return l;
   }
 
@@ -5047,9 +5047,9 @@ function qh(a, b) {
   try {
     console.error(b);
   } catch (e) {
-    setTimeout(function () {
+    setTimeout((function () {
       throw e;
-    });
+    }));
   }
 }
 
@@ -5380,10 +5380,10 @@ function zh(a, b) {
         b.updateQueue = null;
         var g = b.stateNode;
         null === g && (g = b.stateNode = new ph());
-        c.forEach(function (a) {
+        c.forEach((function (a) {
           var c = Ah.bind(null, b, a);
           g.has(a) || (g.add(a), a.then(c, c));
-        });
+        }));
       }
 
       break;
@@ -5768,9 +5768,9 @@ function Zh(a, b) {
 
   if (null !== d && null !== Ph) {
     var g = Wh.bind(null, a, d);
-    Qh = r.unstable_runWithPriority(r.unstable_NormalPriority, function () {
+    Qh = r.unstable_runWithPriority(r.unstable_NormalPriority, (function () {
       return Ae(g);
-    });
+    }));
     Rh = g;
   }
 
@@ -6412,9 +6412,9 @@ function qf(a, b) {
 }
 
 function ki(a, b, c, d, e) {
-  return r.unstable_runWithPriority(r.unstable_ImmediatePriority, function () {
+  return r.unstable_runWithPriority(r.unstable_ImmediatePriority, (function () {
     return a(b, c, d, e);
-  });
+  }));
 }
 
 var li = null,
@@ -6591,9 +6591,9 @@ function Fi(a, b, c) {
 
   a.finishedWork = null;
   a === wi ? ii++ : (wi = a, ii = 0);
-  r.unstable_runWithPriority(r.unstable_ImmediatePriority, function () {
+  r.unstable_runWithPriority(r.unstable_ImmediatePriority, (function () {
     Zh(a, b);
-  });
+  }));
 }
 
 function Dh(a) {
@@ -6633,9 +6633,9 @@ function Ii(a, b, c) {
   X = !0;
 
   try {
-    return r.unstable_runWithPriority(r.unstable_UserBlockingPriority, function () {
+    return r.unstable_runWithPriority(r.unstable_UserBlockingPriority, (function () {
       return a(b, c);
-    });
+    }));
   } finally {
     (X = d) || W || Yh(1073741823, !1);
   }
@@ -6966,9 +6966,9 @@ function Si(a, b, c, d, e) {
       };
     }
 
-    Hi(function () {
+    Hi((function () {
       null != a ? f.legacy_renderSubtreeIntoContainer(a, b, e) : f.render(b, e);
-    });
+    }));
   }
 
   return Li(f._internalRoot);
@@ -7006,11 +7006,11 @@ var Vi = {
   },
   unmountComponentAtNode: function (a) {
     Qi(a) ? void 0 : x("40");
-    return a._reactRootContainer ? (Hi(function () {
-      Si(null, null, a, !1, function () {
+    return a._reactRootContainer ? (Hi((function () {
+      Si(null, null, a, !1, (function () {
         a._reactRootContainer = null;
-      });
-    }), !0) : !1;
+      }));
+    })), !0) : !1;
   },
   unstable_createPortal: function () {
     return Ti.apply(void 0, arguments);
@@ -7213,14 +7213,14 @@ var x = Date,
     D;
 
 function E(a) {
-  C = A(function (b) {
+  C = A((function (b) {
     z(D);
     a(b);
-  });
-  D = y(function () {
+  }));
+  D = y((function () {
     B(C);
     a(exports.unstable_now());
-  }, 100);
+  }), 100);
 }
 
 if ("object" === typeof performance && "function" === typeof performance.now) {
@@ -7494,9 +7494,9 @@ exports.unstable_getFirstCallbackNode = function () {
 
 var g; // This works in non-strict mode
 
-g = function () {
+g = (function () {
   return this;
-}();
+})();
 
 try {
   // This works if eval is allowed (see CSP)
@@ -7675,7 +7675,7 @@ module.exports = function (useSourceMap) {
   var list = []; // return the list of modules as css string
 
   list.toString = function toString() {
-    return this.map(function (item) {
+    return this.map((function (item) {
       var content = cssWithMappingToString(item, useSourceMap);
 
       if (item[2]) {
@@ -7683,7 +7683,7 @@ module.exports = function (useSourceMap) {
       } else {
         return content;
       }
-    }).join('');
+    })).join('');
   }; // import a list of modules into the list
 
 
@@ -7733,9 +7733,9 @@ function cssWithMappingToString(item, useSourceMap) {
 
   if (useSourceMap && typeof btoa === 'function') {
     var sourceMapping = toComment(cssMapping);
-    var sourceURLs = cssMapping.sources.map(function (source) {
+    var sourceURLs = cssMapping.sources.map((function (source) {
       return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';
-    });
+    }));
     return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
   }
 
@@ -7770,14 +7770,14 @@ var	memoize = function (fn) {
 	};
 };
 
-var isOldIE = memoize(function () {
+var isOldIE = memoize((function () {
 	// Test for IE <= 9 as proposed by Browserhacks
 	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
 	// Tests for existence of standard globals is to allow style-loader
 	// to operate correctly into non-standard environments
 	// @see https://github.com/webpack-contrib/style-loader/issues/177
 	return window && document && document.all && !window.atob;
-});
+}));
 
 var getTarget = function (target, parent) {
   if (parent){
@@ -7992,9 +7992,9 @@ function createLinkElement (options) {
 }
 
 function addAttrs (el, attrs) {
-	Object.keys(attrs).forEach(function (key) {
+	Object.keys(attrs).forEach((function (key) {
 		el.setAttribute(key, attrs[key]);
-	});
+	}));
 }
 
 function getNonce() {
@@ -8210,13 +8210,13 @@ module.exports = function (css) {
   	 /gi  = Get all matches, not the first.  Be case insensitive.
    */
 
-  var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function (fullMatch, origUrl) {
+  var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, (function (fullMatch, origUrl) {
     // strip quotes (if they exist)
-    var unquotedOrigUrl = origUrl.trim().replace(/^"(.*)"$/, function (o, $1) {
+    var unquotedOrigUrl = origUrl.trim().replace(/^"(.*)"$/, (function (o, $1) {
       return $1;
-    }).replace(/^'(.*)'$/, function (o, $1) {
+    })).replace(/^'(.*)'$/, (function (o, $1) {
       return $1;
-    }); // already a full url? no change
+    })); // already a full url? no change
 
     if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/|\s*$)/i.test(unquotedOrigUrl)) {
       return fullMatch;
@@ -8238,14 +8238,14 @@ module.exports = function (css) {
 
 
     return "url(" + JSON.stringify(newUrl) + ")";
-  }); // send back the fixed css
+  })); // send back the fixed css
 
   return fixedCss;
 };
 
 /***/ }),
 /* 18 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -8323,7 +8323,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 var App_App =
 /*#__PURE__*/
-function (_React$Component) {
+(function (_React$Component) {
   _inherits(App, _React$Component);
 
   function App(props) {
@@ -8353,9 +8353,9 @@ function (_React$Component) {
   }, {
     key: "removeTodo",
     value: function removeTodo(id) {
-      var remainder = this.state.data.filter(function (todo) {
+      var remainder = this.state.data.filter((function (todo) {
         return todo.id !== id;
-      });
+      }));
       this.setState({
         data: remainder
       });
@@ -8373,7 +8373,7 @@ function (_React$Component) {
   }]);
 
   return App;
-}(react_default.a.Component);
+})(react_default.a.Component);
 
 /* harmony default export */ var src_containers_App = (App_App);
 // CONCATENATED MODULE: ./src/index.js
@@ -8382,5 +8382,5 @@ function (_React$Component) {
 
 react_dom_default.a.render(react_default.a.createElement(src_containers_App, null), document.getElementById('app'));
 
-/***/ })
+/***/ }))
 /******/ ]);
