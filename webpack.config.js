@@ -8,6 +8,8 @@ const plugins = [new HtmlWebpackPlugin({
 })];
 
 module.exports = (env) => {
+    const environment = env || 'production' || 'development';
+    
     if (env === 'production') {
         plugins.push(
             new OptimizeJsPlugin({
@@ -23,16 +25,7 @@ module.exports = (env) => {
             path: path.resolve(__dirname, 'build'),
             filename: 'app.' + environment + '.bundle.js'
         },
-        plugins: [
-            new HtmlWebpackPlugin({
-                template: 'src/index.html',
-                filename: 'index.html',
-                inject: 'body'
-            }),
-            new OptimizeJsPlugin({
-                sourceMap: false
-            })
-        ],
+        plugins: [],
         module: {
             rules: [
                 {
